@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
 data class Message( val main: String, val body: String = "" )
 
 @Composable
-fun Greeting(msg: Message) {
+fun MessageContainer(msg: Message) {
     Row(
         modifier = Modifier.padding(8.dp)
     ){
@@ -102,7 +102,7 @@ fun Conversation(messages: List<Message>){
         items(
             items = messages,
             itemContent = {
-                item: Message -> Greeting(item)
+                item: Message -> MessageContainer(item)
             }
         )
     }
