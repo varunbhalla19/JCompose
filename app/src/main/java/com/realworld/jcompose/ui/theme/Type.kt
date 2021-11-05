@@ -1,4 +1,4 @@
-package com.realworld.composetest.ui.theme
+package com.realworld.jcompose.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

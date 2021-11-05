@@ -1,6 +1,6 @@
-package com.realworld.composetest.data
+package com.realworld.jcompose.data
 
-import com.realworld.composetest.Message
+import com.realworld.jcompose.Message
 
 object SampleData {
     // Sample conversation data

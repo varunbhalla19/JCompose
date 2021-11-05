@@ -1,4 +1,4 @@
-package com.realworld.composetest
+package com.realworld.jcompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -27,8 +27,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.realworld.composetest.data.SampleData
-import com.realworld.composetest.ui.theme.ComposeTestTheme
+import com.realworld.jcompose.data.SampleData
+import com.realworld.jcompose.ui.theme.ComposeTestTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

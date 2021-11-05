@@ -1,4 +1,4 @@
-package com.realworld.composetest.ui.theme
+package com.realworld.jcompose.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

@@ -1,4 +1,4 @@
-package com.realworld.composetest
+package com.realworld.jcompose
 
 import org.junit.Test
 
