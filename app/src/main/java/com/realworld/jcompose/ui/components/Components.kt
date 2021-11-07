@@ -53,21 +53,18 @@ fun Onboarding(
 
 @Composable
 fun Greetings(){
-    Surface(
-        color = MaterialTheme.colors.primary
-    ) {
-        val namesList = List(1000){ "Test: $it" }
-        LazyColumn(
-            modifier = Modifier
-                .padding(4.dp)
-                .fillMaxSize(),
-        ){
-            items(namesList){
-                name -> Greeting(name = name)
-            }
-        }
 
+    val namesList = List(1000){ "Test: $it" }
+    LazyColumn(
+        modifier = Modifier
+            .padding(4.dp)
+            .fillMaxSize(),
+    ){
+        items(namesList){
+            name -> Greeting(name = name)
+        }
     }
+
 }
 
 @Composable
