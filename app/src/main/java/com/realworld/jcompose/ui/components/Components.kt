@@ -78,30 +78,32 @@ fun Greeting(name: String){
             mutableStateOf(false)
         }   // use rememberSaveable to persist recomposition by lazyColumn
 
-        val padBottom by animateDpAsState(
-            targetValue = if (expanded) 24.dp else 0.dp,
-            animationSpec = spring(
-                dampingRatio = Spring.DampingRatioMediumBouncy,
-                stiffness = Spring.StiffnessLow
-            )
-        )
         Row(
-            modifier = Modifier.padding(8.dp)
+            modifier = Modifier
+                .padding(8.dp)
+                .animateContentSize(
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioMediumBouncy,
+                        stiffness = Spring.StiffnessLow
+                    )
+                )
         ) {
             Column(
                 modifier = Modifier
                     .weight(1f, true)
-                    .padding(bottom = padBottom.coerceAtLeast(0.dp))
             ) {
                 Text(
                     text = "Hello,"
                 )
                 Text(
-                    text = name
-                )
+                if (expanded) {
+                    Text(
+                        text = ("Composem ipsum color sit lazy, " +
+                                "padding theme elit, sed do bouncy. ").repeat(4),
+                    )
+                }
+
             }
-
-
 
             OutlinedButton(
                 onClick = {
