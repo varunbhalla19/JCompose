@@ -1,5 +1,5 @@
 # JCompose
 
-inspired by 
-https://developer.android.com/jetpack/compose/tutorial
+inspired by Codelab
+https://developer.android.com/codelabs/jetpack-compose-basics
 
