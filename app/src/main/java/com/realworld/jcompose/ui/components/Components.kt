@@ -69,8 +69,8 @@ fun Greetings(){
 
 @Composable
 fun Greeting(name: String){
-    Surface(
-        color = MaterialTheme.colors.secondary,
+    Card(
+        backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier.padding(8.dp, 4.dp)
     ) {
 
