@@ -33,9 +33,7 @@ fun Onboarding(
     onPress: () -> Unit = {}
 ){
 
-    Surface(
-        color = MaterialTheme.colors.secondary
-    ){
+    Surface{
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
