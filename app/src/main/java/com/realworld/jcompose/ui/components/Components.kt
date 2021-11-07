@@ -1,5 +1,8 @@
 package com.realworld.jcompose.ui.components
 
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -80,13 +83,20 @@ fun Greeting(name: String){
             mutableStateOf(false)
         }   // use rememberSaveable to persist recomposition by lazyColumn
 
+        val padBottom by animateDpAsState(
+            targetValue = if (expanded) 24.dp else 0.dp,
+            animationSpec = spring(
+                dampingRatio = Spring.DampingRatioMediumBouncy,
+                stiffness = Spring.StiffnessLow
+            )
+        )
         Row(
             modifier = Modifier.padding(8.dp)
         ) {
             Column(
                 modifier = Modifier
                     .weight(1f, true)
-                    .padding(bottom = if (expanded) 24.dp else 0.dp)
+                    .padding(bottom = padBottom)
             ) {
                 Text(
                     text = "Hello,"
