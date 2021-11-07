@@ -96,7 +96,7 @@ fun Greeting(name: String){
             Column(
                 modifier = Modifier
                     .weight(1f, true)
-                    .padding(bottom = padBottom)
+                    .padding(bottom = padBottom.coerceAtLeast(0.dp))
             ) {
                 Text(
                     text = "Hello,"
