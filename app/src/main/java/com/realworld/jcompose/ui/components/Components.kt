@@ -14,8 +14,17 @@ import com.realworld.jcompose.ui.theme.ComposeTestTheme
 @Composable
 fun MyApp(){
 
+    var shouldShowOnboarding by remember { mutableStateOf(true) } // rememberSavable to survive config changes.
+
+    if(shouldShowOnboarding){
+        Onboarding{
+            shouldShowOnboarding = false
+        }
+    }else {
         Greetings()
+    }
 }
+
 @Composable
 fun Onboarding(
     onPress: () -> Unit = {}
