@@ -96,6 +96,12 @@ fun Greeting(name: String){
                     text = "Hello,"
                 )
                 Text(
+                    text = name,
+                    style = MaterialTheme.typography.h4.copy(
+                        fontWeight = FontWeight.ExtraBold
+                    )
+                )
+
                 if (expanded) {
                     Text(
                         text = ("Composem ipsum color sit lazy, " +
