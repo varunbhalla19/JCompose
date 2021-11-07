@@ -17,6 +17,31 @@ fun MyApp(){
         Greetings()
 }
 @Composable
+fun Onboarding(
+    onPress: () -> Unit = {}
+){
+
+    Surface(
+        color = MaterialTheme.colors.secondary
+    ){
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+
+            Button(onClick = {
+                onPress()
+            }) {
+                Text(text = "OnBoarding Screen")
+            }
+
+        }
+    }
+}
+
+
+@Composable
 fun Greetings(){
     Surface(
         color = MaterialTheme.colors.primary
