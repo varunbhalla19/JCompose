@@ -67,20 +67,7 @@ fun ProfileDetail(modifier: Modifier = Modifier){
 
 @Composable
 fun ImageListLayout(){
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(text = "Hello")
-                },
-                actions = {
-                    IconButton(onClick = {}) {
-                        Icon(Icons.Filled.Favorite, contentDescription = null)
-                    }
-                }
-            )
-        }
-    ) {
+    BlankScreen() {
         LazilyList()
     }
 }
