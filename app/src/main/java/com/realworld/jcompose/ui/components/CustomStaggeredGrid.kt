@@ -137,15 +137,17 @@ fun BodyContent(
     val scrollState = rememberScrollState()
 
     BlankScreen() {
-        StaggeredGrid(
-            rows = 4,
+        Row(
             modifier = Modifier
                 .horizontalScroll(scrollState)
-                .padding(top = 16.dp)
                 .background(Color.Magenta)
-        ) {
-            topics.forEach {
-                ChipCard(text = it, modifier = Modifier.padding(4.dp))
+        ){
+            StaggeredGrid(
+                rows = 4
+            ) {
+                topics.forEach {
+                    ChipCard(text = it, modifier = Modifier.padding(4.dp))
+                }
             }
         }
     }
@@ -168,3 +170,5 @@ fun ChipPreview(){
     }
 }
 
+
+// TODO - Compose Layout Basics Codelab -> 11. Intrinsics.
